@@ -1,136 +1,92 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mohit Bags Store</title>
-
+<title>Mohit Bags | Premium Bags Store</title>
+<meta name="description" content="Mohit Bags - Premium bags for every you. Stylish, durable and affordable.">
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
-
-body{
-background:#f5f5f5;
-}
-
-header{
-background:#111;
-color:white;
-padding:20px;
-text-align:center;
-}
-
-.hero{
-background:#d62828;
-color:white;
-padding:50px 20px;
-text-align:center;
-}
-
-.hero h1{
-font-size:35px;
-}
-
-.hero p{
-margin-top:10px;
-font-size:18px;
-}
-
-.btn{
-display:inline-block;
-margin-top:20px;
-padding:12px 25px;
-background:white;
-color:#d62828;
-text-decoration:none;
-border-radius:30px;
-font-weight:bold;
-}
-
-.products{
-padding:30px;
-}
-
-.products h2{
-text-align:center;
-margin-bottom:20px;
-}
-
-.card{
-background:white;
-padding:15px;
-border-radius:10px;
-margin-bottom:20px;
-box-shadow:0 0 10px rgba(0,0,0,.1);
-text-align:center;
-}
-
-.card img{
-width:100%;
-border-radius:10px;
-}
-
-.price{
-color:red;
-font-size:22px;
-margin:10px 0;
-font-weight:bold;
-}
-
-footer{
-background:#111;
-color:white;
-text-align:center;
-padding:20px;
-margin-top:30px;
-}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;color:#171717;background:#fff;line-height:1.6}
+a{text-decoration:none;color:inherit}
+.top{background:#0b0b0b;color:#fff;padding:9px 5%;display:flex;justify-content:space-between;font-size:13px}
+nav{background:#0d0d0d;color:#fff;padding:16px 5%;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:20;border-bottom:1px solid #292929}
+.logo{font-size:25px;font-weight:800;letter-spacing:1px;color:#e7b64f}.logo small{display:block;color:#fff;font-size:9px;letter-spacing:2px}
+.links{display:flex;gap:28px;font-size:14px;font-weight:700}.links a:hover{color:#e7b64f}
+.menu{display:none;font-size:26px}
+.hero{min-height:570px;background:linear-gradient(90deg,#0c0c0c 0%,#151515 48%,#302018 100%);color:white;display:flex;align-items:center;padding:55px 8%;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;right:-100px;bottom:-180px;width:600px;height:600px;border-radius:50%;background:rgba(231,182,79,.08)}
+.heroText{width:52%;position:relative;z-index:2}.eyebrow{color:#e7b64f;font-weight:bold;letter-spacing:3px}
+h1{font-family:Georgia,serif;font-size:64px;line-height:1.03;margin:15px 0}.gold{color:#e7b64f}
+.hero p{font-size:18px;color:#ddd;max-width:500px;margin-bottom:28px}
+.btn{display:inline-block;background:#e7b64f;color:#111;padding:14px 24px;border-radius:4px;font-weight:800;border:0;cursor:pointer}.btn:hover{filter:brightness(1.08)}
+.bagArt{position:absolute;right:7%;bottom:0;width:43%;height:82%;display:flex;align-items:center;justify-content:center}
+.bag{width:330px;height:360px;background:linear-gradient(135deg,#8b4b28,#3b1d10);border-radius:35px 35px 70px 70px;box-shadow:0 30px 55px #0008;position:relative;border:5px solid #2b140a}
+.bag:before{content:"";position:absolute;width:160px;height:110px;border:18px solid #5c2e17;border-bottom:0;border-radius:90px 90px 0 0;left:80px;top:-95px}
+.pocket{position:absolute;bottom:45px;left:45px;width:240px;height:105px;border-radius:18px;background:#6b351a;border:3px solid #2c1409}.strap{position:absolute;top:30px;width:28px;height:250px;background:#4b2412}.s1{left:55px}.s2{right:55px}
+.features{background:#101010;color:#fff;display:grid;grid-template-columns:repeat(4,1fr);padding:24px 6%;gap:15px;text-align:center}.feature b{display:block;color:#e7b64f;margin-bottom:3px}
+.section{padding:70px 6%}.title{text-align:center;font-family:Georgia,serif;font-size:40px;margin-bottom:40px}.title span{color:#c99029}
+.grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
+.card{background:#f7f5f1;border-radius:10px;padding:18px;text-align:center;transition:.25s;box-shadow:0 5px 20px #00000010}.card:hover{transform:translateY(-7px);box-shadow:0 12px 28px #0002}
+.pic{height:190px;border-radius:8px;background:linear-gradient(145deg,#eee,#fff);display:flex;align-items:center;justify-content:center;margin-bottom:15px;overflow:hidden}
+.productBag{width:120px;height:130px;border-radius:15px;background:linear-gradient(145deg,#222,#090909);position:relative;box-shadow:0 15px 20px #0003}.productBag:before{content:"";position:absolute;width:55px;height:40px;border:9px solid #222;border-bottom:0;border-radius:30px 30px 0 0;left:23px;top:-32px}.brown{background:linear-gradient(145deg,#8a4d2d,#3b1b0d)}.blue{background:linear-gradient(145deg,#26384d,#0c1825)}.pink{background:linear-gradient(145deg,#bd8e8b,#684747)}
+.card h3{font-size:15px;margin:8px}.card .btn{padding:9px 15px;font-size:12px}
+.about{background:#101010;color:#fff;display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}.aboutArt{height:330px;border-radius:12px;background:radial-gradient(circle at 50% 45%,#4b2a18,#17110e 55%,#080808);display:flex;align-items:center;justify-content:center}.duffle{width:330px;height:145px;background:#090909;border-radius:35px;box-shadow:0 25px 35px #000;position:relative}.duffle:before{content:"";position:absolute;width:150px;height:90px;border:14px solid #191919;border-bottom:0;border-radius:80px 80px 0 0;left:90px;top:-65px}
+.about h2{font:42px Georgia,serif;margin:10px 0 18px}.about p{color:#ccc;margin-bottom:25px}.checks{margin-top:25px;display:grid;gap:12px}.checks b{color:#e7b64f}
+.trust{background:#f8f6f2;display:grid;grid-template-columns:repeat(4,1fr);text-align:center;gap:20px}.trust strong{display:block;font-size:25px}.trust span{color:#666}
+.contact{background:#fff}.contactBox{max-width:850px;margin:auto;background:#f7f5f1;padding:35px;border-radius:14px;text-align:center}.contactBox p{margin:10px;color:#555}
+footer{background:#0b0b0b;color:#bbb;padding:55px 6% 20px;display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:35px}.footTitle{color:#fff;font-weight:bold;margin-bottom:15px}.footLogo{color:#e7b64f;font-size:24px;font-weight:800}.foot a{display:block;margin:7px 0}.copy{grid-column:1/-1;border-top:1px solid #333;text-align:center;padding-top:18px;margin-top:15px;font-size:13px}
+.wa{position:fixed;right:20px;bottom:20px;background:#1db954;color:white;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;z-index:30;box-shadow:0 5px 20px #0004}
+@media(max-width:850px){.links{display:none}.menu{display:block}.hero{min-height:650px;padding:45px 7%;align-items:flex-start}.heroText{width:100%}h1{font-size:45px}.bagArt{width:100%;right:0;height:310px;bottom:-20px}.bag{transform:scale(.72)}.features,.trust{grid-template-columns:repeat(2,1fr)}.grid{grid-template-columns:repeat(2,1fr)}.about{grid-template-columns:1fr}.aboutArt{height:270px}footer{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.top{font-size:11px}.top span:last-child{display:none}.section{padding:48px 5%}.title{font-size:31px}.grid{gap:10px}.pic{height:150px}.productBag{transform:scale(.78)}footer{grid-template-columns:1fr}.hero p{font-size:16px}.features,.trust{gap:10px;padding:20px 4%;font-size:13px}.feature{padding:8px 2px}}
 </style>
 </head>
-
 <body>
 
-<header>
-<h1>Mohit Bags Store</h1>
-<p>Quality Bags at Best Price</p>
-</header>
+<div class="top"><span>☎ +91 9198104670</span><span>🚚 FREE DELIVERY ALL OVER INDIA</span><span>Follow us: Instagram • Facebook • WhatsApp</span></div>
 
-<section class="hero">
-<h1>Welcome to Mohit Bags Store</h1>
-<p>Stylish & Durable Bags</p>
+<nav>
+<a class="logo" href="#">MB <span>MOHIT BAGS</span><small>STYLE THAT CARRIES YOU</small></a>
+<div class="links"><a href="#home">HOME</a><a href="#collection">COLLECTION</a><a href="#about">ABOUT US</a><a href="#why">WHY US</a><a href="#contact">CONTACT</a></div>
+<div class="menu">☰</div>
+</nav>
 
-<a class="btn" href="tel:+919198104670">Call Now</a>
-
+<section class="hero" id="home">
+<div class="heroText"><div class="eyebrow">MOHIT BAGS • PREMIUM COLLECTION</div><h1>Premium Bags<br><span class="gold">For Every You</span></h1><p>Stylish. Durable. Affordable. Discover bags made for work, travel and everyday life.</p><a class="btn" href="https://wa.me/919198104670?text=Hello%20Mohit%20Bags,%20I%20want%20to%20order%20a%20bag." target="_blank">💬 ORDER ON WHATSAPP</a></div>
+<div class="bagArt"><div class="bag"><div class="strap s1"></div><div class="strap s2"></div><div class="pocket"></div></div></div>
 </section>
 
-<section class="products">
+<div class="features"><div class="feature">🚚<b>FREE DELIVERY</b>All over India</div><div class="feature">🏆<b>PREMIUM QUALITY</b>Best quality products</div><div class="feature">🔒<b>SECURE PAYMENT</b>Safe & secure</div><div class="feature">☎<b>CUSTOMER SUPPORT</b>We're here to help</div></div>
 
-<h2>Our Products</h2>
-
-<div class="card">
-<img src="https://via.placeholder.com/400x300?text=Bag+Photo" alt="Bag">
-<h3>School Bag</h3>
-<div class="price">₹999</div>
+<section class="section" id="collection">
+<h2 class="title">OUR <span>COLLECTION</span></h2>
+<div class="grid">
+<div class="card"><div class="pic"><div class="productBag"></div></div><h3>BACKPACK</h3><a class="btn" href="https://wa.me/919198104670?text=I%20want%20to%20see%20Backpack%20collection." target="_blank">SHOP NOW</a></div>
+<div class="card"><div class="pic"><div class="productBag brown"></div></div><h3>LAPTOP BAGS</h3><a class="btn" href="https://wa.me/919198104670?text=I%20want%20to%20see%20Laptop%20Bags." target="_blank">SHOP NOW</a></div>
+<div class="card"><div class="pic"><div class="productBag brown"></div></div><h3>SLING BAGS</h3><a class="btn" href="https://wa.me/919198104670?text=I%20want%20to%20see%20Sling%20Bags." target="_blank">SHOP NOW</a></div>
+<div class="card"><div class="pic"><div class="productBag blue"></div></div><h3>TRAVEL BAGS</h3><a class="btn" href="https://wa.me/919198104670?text=I%20want%20to%20see%20Travel%20Bags." target="_blank">SHOP NOW</a></div>
+<div class="card"><div class="pic"><div class="productBag pink"></div></div><h3>HAND BAGS</h3><a class="btn" href="https://wa.me/919198104670?text=I%20want%20to%20see%20Hand%20Bags." target="_blank">SHOP NOW</a></div>
 </div>
-
-<div class="card">
-<img src="https://via.placeholder.com/400x300?text=Bag+Photo" alt="Bag">
-<h3>Travel Bag</h3>
-<div class="price">₹1499</div>
-</div>
-
 </section>
+
+<section class="section about" id="about">
+<div class="aboutArt"><div class="duffle"></div></div>
+<div><div class="eyebrow">ABOUT US</div><h2>Quality Bags,<br>Made For You</h2><p>At Mohit Bags, we believe a bag is more than just an accessory — it's your everyday companion. We bring you the perfect combination of style, durability and comfort at the best price.</p><div class="checks"><div>✓ <b>TRENDY DESIGNS</b> — Latest & fashionable styles</div><div>✓ <b>DURABLE MATERIAL</b> — Long lasting & strong</div><div>✓ <b>SPACIOUS & COMFORTABLE</b> — Designed for convenience</div><div>✓ <b>BEST PRICE</b> — Premium quality, affordable price</div></div><br><a class="btn" href="https://wa.me/919198104670?text=Hello%20Mohit%20Bags,%20I%20need%20help." target="_blank">💬 CHAT WITH US</a></div>
+</section>
+
+<section class="section trust" id="why"><div><strong>1000+</strong><span>Happy Customers</span></div><div><strong>7 Days</strong><span>Easy Returns</span></div><div><strong>100%</strong><span>Quality Assured</span></div><div><strong>24/7</strong><span>Customer Support</span></div></section>
+
+<section class="section contact" id="contact"><h2 class="title">GET IN <span>TOUCH</span></h2><div class="contactBox"><h3>Ready to find your perfect bag?</h3><p>Call or WhatsApp us for products, prices and orders.</p><p><b>📞 +91 9198104670</b></p><a class="btn" href="https://wa.me/919198104670?text=Hello%20Mohit%20Bags,%20I%20want%20to%20place%20an%20order." target="_blank">WHATSAPP US</a></div></section>
 
 <footer>
-
-<p>📞 +91 9198104670</p>
-
-<p>© 2026 Mohit Bags Store</p>
-
+<div><div class="footLogo">MOHIT BAGS</div><p>Style that carries you.<br>Premium bags for every you.</p></div>
+<div><div class="footTitle">QUICK LINKS</div><a href="#home">Home</a><a href="#collection">Collection</a><a href="#about">About Us</a><a href="#why">Why Us</a><a href="#contact">Contact</a></div>
+<div><div class="footTitle">CUSTOMER CARE</div><a href="#">Track Your Order</a><a href="#">Return & Refund</a><a href="#">Shipping Policy</a><a href="#">Terms & Conditions</a></div>
+<div><div class="footTitle">CONTACT US</div><p>☎ +91 9198104670</p><p>📍 India</p><p>💬 WhatsApp Orders Available</p></div>
+<div class="copy">© 2026 Mohit Bags Store. All Rights Reserved.</div>
 </footer>
 
+<a class="wa" href="https://wa.me/919198104670?text=Hello%20Mohit%20Bags,%20I%20want%20to%20order%20a%20bag." target="_blank" aria-label="WhatsApp">◉</a>
 </body>
-  </html>
+</html>
